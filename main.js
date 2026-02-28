@@ -13,9 +13,9 @@ const CONFIG = {
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 function orderOnWhatsApp(itemName, price) {
   const msg = encodeURIComponent(
-    `Hello ${CONFIG.shopName}! 🍛\n\nI'd like to order:\n\n` +
-    `🍽️ *${itemName}*\n` +
-    `💰 Price: ${price}\n\n` +
+    `Hello ${CONFIG.shopName}! \n\nI'd like to order:\n\n` +
+    ` *${itemName}*\n` +
+    ` Price: ${price}\n\n` +
     `Please confirm availability and share delivery/pickup details. Thank you!`
   );
   window.open(`https://wa.me/${CONFIG.whatsapp}?text=${msg}`, '_blank');
@@ -23,7 +23,7 @@ function orderOnWhatsApp(itemName, price) {
 
 function generalWhatsAppOrder() {
   const msg = encodeURIComponent(
-    `Hello ${CONFIG.shopName}! 🍛\n\nI'd like to place an order. Please share the menu or let me know what's available today. Thank you!`
+    `Hello ${CONFIG.shopName}! \n\nI'd like to place an order. Please share the menu or let me know what's available today. Thank you!`
   );
   window.open(`https://wa.me/${CONFIG.whatsapp}?text=${msg}`, '_blank');
 }

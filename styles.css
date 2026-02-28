@@ -17,6 +17,54 @@
   --overlay-mid: rgba(26, 16, 8, 0.60);
 }
 
+/* ━━━━ INLINE SVG ICONS ━━━━ */
+.i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: -3px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.stat-icon .i {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  stroke: var(--saffron);
+}
+
+.hub-card-icon .i,
+.menu-cat-card .i {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  stroke: var(--saffron);
+}
+
+.contact-card .icon .i {
+  width: 28px;
+  height: 28px;
+  stroke: var(--saffron);
+}
+
+.combo-badge .i {
+  width: 12px;
+  height: 12px;
+  vertical-align: -1px;
+  stroke: var(--charcoal);
+}
+
+.bottom-nav .icon .i {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+
 /* ━━━━ RESET & BASE ━━━━ */
 *,
 *::before,
