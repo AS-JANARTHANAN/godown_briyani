@@ -2663,15 +2663,14 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 20px 12px;
-  min-height: 130px;
+  padding: 18px 12px;
+  min-height: 0;                /* no min-height — let content decide */
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
-  border-radius: 16px;
+  border-radius: 12px;
   text-align: center;
-  background: var(--color-surface, #231508);
-  border: 1px solid rgba(232,105,42,0.12);
+  background: #231508;
+  border: 1px solid rgba(255, 215, 0, 0.15);
   text-decoration: none;
 }
 
@@ -2832,6 +2831,7 @@ img {
   padding: 0 14px 20px !important;
   width: 100% !important;
   box-sizing: border-box !important;
+  align-items: start !important;       /* ← KEY FIX: don't stretch cards to row height */
 }
 
 .menu-card {
@@ -2839,30 +2839,35 @@ img {
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 8px !important;
-  padding: 20px 12px !important;
+  gap: 6px !important;
+  padding: 18px 12px !important;       /* compact padding */
   min-height: 0 !important;
   height: auto !important;
   width: 100% !important;
   box-sizing: border-box !important;
-  border-radius: 14px !important;
+  border-radius: 12px !important;
   background: #231508 !important;
-  border: 1px solid rgba(255, 215, 0, 0.12) !important;
+  border: 1px solid rgba(255, 215, 0, 0.15) !important;
   text-decoration: none !important;
   cursor: pointer !important;
   -webkit-tap-highlight-color: transparent !important;
-  transition: border-color 0.15s !important;
+  transition: border-color 0.15s, background 0.15s !important;
   box-shadow: none !important;
+}
+
+.menu-card:hover {
+  border-color: rgba(255, 215, 0, 0.5) !important;
+  background: rgba(255, 215, 0, 0.04) !important;
 }
 
 .menu-card:active {
   border-color: #FFD700 !important;
-  background: rgba(255, 215, 0, 0.06) !important;
+  background: rgba(255, 215, 0, 0.08) !important;
 }
 
 .menu-card-icon {
-  width: 38px !important;
-  height: 38px !important;
+  width: 36px !important;
+  height: 36px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -2872,15 +2877,16 @@ img {
   box-shadow: none !important;
   padding: 0 !important;
   margin: 0 !important;
+  flex-shrink: 0 !important;
 }
 
 .menu-card-icon svg {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
 }
 
 .menu-card-name {
-  font-size: 0.82rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   color: #f5ede0 !important;
   text-align: center !important;
@@ -2894,7 +2900,7 @@ img {
 
 .menu-card-price,
 .menu-card-from {
-  font-size: 0.72rem !important;
+  font-size: 0.7rem !important;
   color: #FFD700 !important;
   text-align: center !important;
   margin: 0 !important;
@@ -2902,46 +2908,52 @@ img {
   background: none !important;
   border: none !important;
   box-shadow: none !important;
+  opacity: 0.85 !important;
 }
 
+/* Full Menu card — yellow bg, horizontal, spans full width */
 .menu-card.full-menu {
   grid-column: 1 / -1 !important;
+  align-self: stretch !important;      /* full-menu can stretch */
   flex-direction: row !important;
   justify-content: center !important;
-  gap: 16px !important;
-  padding: 16px !important;
+  gap: 12px !important;
+  padding: 14px 16px !important;
   background: #FFD700 !important;
   border-color: #FFD700 !important;
-  border-radius: 14px !important;
+  border-radius: 12px !important;
 }
 
 .menu-card.full-menu .menu-card-name {
   color: #1a0f00 !important;
   font-size: 0.95rem !important;
+  font-weight: 800 !important;
 }
 
 .menu-card.full-menu .menu-card-price,
 .menu-card.full-menu .menu-card-from {
   color: #1a0f00 !important;
-  opacity: 0.8 !important;
+  opacity: 0.7 !important;
 }
 
+/* Desktop: 3 columns, compact sizing */
 @media (min-width: 768px) {
   .menu-grid {
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 14px !important;
-    padding: 0 28px 28px !important;
+    gap: 12px !important;
+    padding: 0 24px 24px !important;
+    align-items: start !important;
   }
 
   .menu-card {
-    gap: 10px !important;
-    padding: 24px 16px !important;
+    gap: 8px !important;
+    padding: 20px 14px !important;
   }
 
-  .menu-card-icon { width: 44px !important; height: 44px !important; }
-  .menu-card-icon svg { width: 36px; height: 36px; }
-  .menu-card-name { font-size: 0.95rem !important; }
-  .menu-card-price, .menu-card-from { font-size: 0.8rem !important; }
+  .menu-card-icon { width: 40px !important; height: 40px !important; }
+  .menu-card-icon svg { width: 32px !important; height: 32px !important; }
+  .menu-card-name { font-size: 0.88rem !important; }
+  .menu-card-price, .menu-card-from { font-size: 0.75rem !important; }
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
