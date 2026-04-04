@@ -77,8 +77,8 @@ bulk_html = f"""
        <div style="background:var(--color-surface); padding:16px; border-radius:8px;">✓ Custom Menu Planning Available</div>
     </div>
     
-    <div style="text-align:center; margin-top:40px;">
-        <a href="https://wa.me/919940963397?text=Hi%2C%20I%20need%20details%20about%20event%20catering." style="display:inline-block; border: 2px solid var(--color-primary); color:var(--color-text); padding:12px 24px; border-radius:8px; font-weight:700; text-decoration:none; margin-right:12px;">Enquire for Catering</a>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:40px;">
+        <a href="https://wa.me/919940963397?text=Hi%2C%20I%20need%20details%20about%20event%20catering." style="display:inline-block; border: 2px solid var(--color-primary); color:var(--color-text); padding:12px 24px; border-radius:8px; font-weight:700; text-decoration:none;">Enquire for Catering</a>
         <a href="tel:+919940963397" style="display:inline-block; background:var(--color-primary); color:#1a0f00; padding:12px 24px; border-radius:8px; font-weight:700; text-decoration:none;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="i" style="width:16px;height:16px;vertical-align:middle;margin-right:4px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call 9940963397</a>
     </div>
 </section>
