@@ -12,7 +12,7 @@
 
   --color-surface: #1c1c14;
 
-  --color-primary: #F5CB00;
+  --color-primary: #FFD700;
 
   --color-gold: #FFD700;
 
@@ -326,8 +326,6 @@ a {
 
     transform: scale(1);
 
-    box-shadow: 0 0 28px rgba(245, 203, 0, 0.55);
-
   }
 
 
@@ -335,8 +333,6 @@ a {
   50% {
 
     transform: scale(1.025);
-
-    box-shadow: 0 0 40px rgba(245, 203, 0, 0.8);
 
   }
 
@@ -624,7 +620,7 @@ a {
 
   margin: 0 auto 16px;
 
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8)); /* logo only — keep */
 
   animation: fadeIn 0.8s ease both;
 
@@ -769,8 +765,6 @@ a {
   border-radius: 10px;
 
   cursor: pointer;
-
-  box-shadow: 0 0 28px rgba(245, 203, 0, 0.55);
 
   animation: slideUp 0.7s ease both, pulse 2.5s ease-in-out 2s infinite;
 
@@ -1154,9 +1148,9 @@ a {
 
   padding: 14px;
 
-  background: var(--saffron);
+  background: #FFD700 !important;
 
-  color: var(--charcoal);
+  color: #1a0f00 !important;
 
   font-family: 'Poppins', sans-serif;
 
@@ -1166,13 +1160,15 @@ a {
 
   text-align: center;
 
-  border: none;
+  border: none !important;
 
   border-radius: 8px;
 
   cursor: pointer;
 
-  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: none !important;
+
+  transition: transform 0.15s;
 
 }
 
@@ -1181,8 +1177,6 @@ a {
 .btn-order-wa:active {
 
   transform: scale(0.97);
-
-  box-shadow: 0 0 20px rgba(245, 203, 0, 0.4);
 
 }
 
@@ -1431,6 +1425,8 @@ a {
   display: -webkit-box;
 
   -webkit-line-clamp: 2;
+
+  line-clamp: 2;
 
   -webkit-box-orient: vertical;
 
@@ -1902,7 +1898,7 @@ a {
 
   border: none;
 
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 
   transition: transform 0.15s;
 
@@ -2160,9 +2156,9 @@ a {
 
   background: transparent;
 
-  border: 2px solid var(--gold);
+  border: 2px solid #FFD700;
 
-  color: var(--gold);
+  color: #FFD700;
 
   font-family: 'Poppins', sans-serif;
 
@@ -2184,7 +2180,7 @@ a {
 
 .btn-call:hover {
 
-  background: var(--gold);
+  background: #FFD700;
 
   color: var(--charcoal);
 
@@ -2208,7 +2204,7 @@ a {
 
   height: 2px;
 
-  background: var(--gold);
+  background: #FFD700;
 
   margin: 14px 0;
 
@@ -2254,7 +2250,7 @@ a {
 
   border: 1px solid rgba(255, 215, 0, 0.15);
 
-  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+  transition: transform 0.25s, border-color 0.25s;
 
   text-decoration: none;
 
@@ -2269,8 +2265,6 @@ a {
   transform: translateY(-4px);
 
   border-color: var(--saffron);
-
-  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
 
 }
 
@@ -2705,7 +2699,7 @@ a {
 [class*="card-from"],
 [class*="card-price"] {
   font-size: 0.75rem;
-  color: var(--color-primary, #e8692a);
+  color: var(--color-primary, #FFD700);
   text-align: center;
 }
 
@@ -2718,7 +2712,7 @@ a[href*="menu.html"].menu-card {
   justify-content: center;
   gap: 12px;
   min-height: 64px;
-  background: var(--color-primary, #e8692a);
+  background: var(--color-primary, #FFD700);
   color: #1a0f00;
 }
 
@@ -2828,123 +2822,126 @@ img {
 
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   PATCH 4 — MENU CARD FLAT CSS
+   PATCH 6 — MENU CARD COMPACT CENTERED
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
-/* ── GRID WRAPPER ── */
 .menu-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  padding: 0 16px 24px;
-  width: 100%;
-  box-sizing: border-box;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+  padding: 0 14px 20px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-/* ── SINGLE CARD — one box, everything inside ── */
 .menu-card {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 10px !important;
-  padding: 24px 12px 20px !important;
-  min-height: 140px !important;
+  gap: 8px !important;
+  padding: 20px 12px !important;
+  min-height: 0 !important;
+  height: auto !important;
   width: 100% !important;
   box-sizing: border-box !important;
-  border-radius: 16px !important;
+  border-radius: 14px !important;
   background: #231508 !important;
-  border: 1px solid rgba(232, 105, 42, 0.15) !important;
+  border: 1px solid rgba(255, 215, 0, 0.12) !important;
   text-decoration: none !important;
-  transition: border-color 0.2s, background 0.2s !important;
   cursor: pointer !important;
   -webkit-tap-highlight-color: transparent !important;
+  transition: border-color 0.15s !important;
+  box-shadow: none !important;
 }
 
-.menu-card:hover,
 .menu-card:active {
-  border-color: #e8692a !important;
-  background: rgba(232, 105, 42, 0.08) !important;
+  border-color: #FFD700 !important;
+  background: rgba(255, 215, 0, 0.06) !important;
 }
 
-/* ── ICON — NO border, NO background ── */
 .menu-card-icon {
+  width: 38px !important;
+  height: 38px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 44px !important;
-  height: 44px !important;
   background: none !important;
   border: none !important;
   border-radius: 0 !important;
+  box-shadow: none !important;
   padding: 0 !important;
+  margin: 0 !important;
 }
 
 .menu-card-icon svg {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
 }
 
-/* ── NAME — NO border, NO background ── */
 .menu-card-name {
-  font-size: 0.875rem !important;
+  font-size: 0.82rem !important;
   font-weight: 700 !important;
   color: #f5ede0 !important;
   text-align: center !important;
-  line-height: 1.3 !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  padding: 0 !important;
   background: none !important;
   border: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  box-shadow: none !important;
 }
 
-/* ── PRICE — NO border, NO background ── */
-.menu-card-price {
-  font-size: 0.75rem !important;
-  color: #e8692a !important;
+.menu-card-price,
+.menu-card-from {
+  font-size: 0.72rem !important;
+  color: #FFD700 !important;
   text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
   background: none !important;
   border: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  box-shadow: none !important;
 }
 
-/* ── FULL MENU CARD — spans full width ── */
 .menu-card.full-menu {
   grid-column: 1 / -1 !important;
   flex-direction: row !important;
   justify-content: center !important;
-  gap: 12px !important;
-  min-height: 60px !important;
-  background: #e8692a !important;
-  border-color: #e8692a !important;
+  gap: 16px !important;
+  padding: 16px !important;
+  background: #FFD700 !important;
+  border-color: #FFD700 !important;
+  border-radius: 14px !important;
 }
 
 .menu-card.full-menu .menu-card-name {
   color: #1a0f00 !important;
-  font-size: 1rem !important;
+  font-size: 0.95rem !important;
 }
 
-/* ── DESKTOP: 3 columns ── */
+.menu-card.full-menu .menu-card-price,
+.menu-card.full-menu .menu-card-from {
+  color: #1a0f00 !important;
+  opacity: 0.8 !important;
+}
+
 @media (min-width: 768px) {
   .menu-grid {
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 16px !important;
-    padding: 0 32px 32px !important;
+    gap: 14px !important;
+    padding: 0 28px 28px !important;
   }
 
   .menu-card {
-    min-height: 160px !important;
-    padding: 28px 16px 24px !important;
+    gap: 10px !important;
+    padding: 24px 16px !important;
   }
 
-  .menu-card-name {
-    font-size: 1rem !important;
-  }
-
-  .menu-card-price {
-    font-size: 0.875rem !important;
-  }
+  .menu-card-icon { width: 44px !important; height: 44px !important; }
+  .menu-card-icon svg { width: 36px; height: 36px; }
+  .menu-card-name { font-size: 0.95rem !important; }
+  .menu-card-price, .menu-card-from { font-size: 0.8rem !important; }
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -2977,14 +2974,15 @@ img {
 
 .branch-card {
   background: #231508;
-  border: 1px solid var(--color-primary);
+  border: 1px solid rgba(255, 215, 0, 0.3);
   border-radius: 16px;
   overflow: hidden;
   transition: border-color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .branch-card:hover {
-  border-color: var(--color-primary);
+  border-color: #FFD700;
 }
 
 .branch-photo {
@@ -2993,12 +2991,15 @@ img {
   aspect-ratio: 16 / 9;
   background: #1a0f00;
   overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  flex-shrink: 0;
 }
 
 .branch-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -3091,57 +3092,137 @@ img {
   margin: 0;
 }
 
+/* ━━━━ BRANCH ACTIONS — PATCH 6 ━━━━ */
 .branch-actions {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 8px;
-  margin-top: 4px;
-  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .branch-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
-  padding: 7px 12px;
+  padding: 9px 8px;
   border-radius: 8px;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 600;
   text-decoration: none;
   border: 1px solid transparent;
   transition: all 0.15s;
   white-space: nowrap;
   -webkit-tap-highlight-color: transparent;
+  box-shadow: none !important;
 }
 
 .btn-call {
-  background: rgba(245, 203, 0, 0.1);
-  color: var(--color-primary);
-  border-color: rgba(245, 203, 0, 0.3);
+  background: rgba(255, 215, 0, 0.08);
+  color: #FFD700;
+  border-color: rgba(255, 215, 0, 0.25);
 }
 
-.btn-call:hover, .btn-call:active {
-  background: var(--color-primary);
+.btn-call:active {
+  background: #FFD700;
   color: #1a0f00;
 }
 
-.btn-whatsapp {
-  background: rgba(37, 211, 102, 0.1);
+/* Branch card whatsapp button — full width, second row */
+.branch-actions .btn-whatsapp {
+  grid-column: 1 / -1;
+  justify-content: center;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  background: rgba(37, 211, 102, 0.08);
   color: #25D366;
-  border-color: rgba(37, 211, 102, 0.3);
+  border-color: rgba(37, 211, 102, 0.25);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 8px;
+  animation: none;
+  box-shadow: none !important;
 }
 
-.btn-whatsapp:hover, .btn-whatsapp:active {
+.branch-actions .btn-whatsapp:active {
   background: #25D366;
   color: #fff;
 }
 
 .btn-directions {
-  background: rgba(96, 165, 250, 0.1);
+  background: rgba(96, 165, 250, 0.08);
   color: #60a5fa;
-  border-color: rgba(96, 165, 250, 0.3);
+  border-color: rgba(96, 165, 250, 0.25);
 }
 
-.btn-directions:hover, .btn-directions:active {
+.btn-directions:active {
   background: #60a5fa;
   color: #1a0f00;
+}
+
+/* Desktop: all 3 in one row */
+@media (min-width: 768px) {
+  .branch-actions {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .branch-actions .btn-whatsapp {
+    grid-column: auto;
+  }
+}
+
+/* Combo & signature order buttons — orange */
+.combo-order-btn,
+.signature-order-btn,
+a[class*="order-btn"],
+button[class*="order"] {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #FFD700 !important;
+  color: #1a0f00 !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  border: none !important;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: none !important;
+  text-decoration: none;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 84px;             /* above bottom-nav (64px) */
+  right: 16px;
+  width: 52px;
+  height: 52px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  transition: transform 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.whatsapp-float:active {
+  transform: scale(0.93);
+}
+
+@media (min-width: 768px) {
+  .whatsapp-float {
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+  }
 }
