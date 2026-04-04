@@ -3,25 +3,25 @@
 
 /* ━━━━ CSS CUSTOM PROPERTIES ━━━━ */
 :root {
-  --color-bg: #1a0f00;
-  --color-surface: #231508;
-  --color-primary: #e8692a;
-  --color-gold: #c9a060;
-  --color-text: #f5ede0;
-  --color-muted: #9c7a5a;
+  --color-bg: #121210;
+  --color-surface: #1c1c14;
+  --color-primary: #F5CB00;
+  --color-gold: #FFD700;
+  --color-text: #f5f0e0;
+  --color-muted: #8a8870;
   
   --saffron: var(--color-primary);
   --turmeric: var(--color-gold);
   --charcoal: var(--color-bg);
-  --smoke: #2C1A0E;
+  --smoke: #1e1e14;
   --cream: var(--color-text);
   --white-smoke: var(--color-text);
   --leaf: #4CAF50;
   --red-dot: #D32F2F;
   --gold: var(--color-gold);
   --card-bg: var(--color-surface);
-  --overlay-dark: rgba(26, 15, 0, 0.90);
-  --overlay-mid: rgba(26, 15, 0, 0.60);
+  --overlay-dark: rgba(18, 18, 16, 0.90);
+  --overlay-mid: rgba(18, 18, 16, 0.60);
 }
 
 /* ━━━━ INLINE SVG ICONS ━━━━ */
@@ -162,12 +162,12 @@ a {
   0%,
   100% {
     transform: scale(1);
-    box-shadow: 0 0 28px rgba(255, 107, 0, 0.55);
+    box-shadow: 0 0 28px rgba(245, 203, 0, 0.55);
   }
 
   50% {
     transform: scale(1.025);
-    box-shadow: 0 0 40px rgba(255, 107, 0, 0.8);
+    box-shadow: 0 0 40px rgba(245, 203, 0, 0.8);
   }
 }
 
@@ -222,7 +222,7 @@ a {
   left: 0;
   right: 0;
   height: 56px;
-  background: rgba(26, 16, 8, 0.95);
+  background: rgba(18, 18, 16, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
@@ -230,7 +230,7 @@ a {
   justify-content: space-between;
   padding: 0 18px;
   z-index: 100;
-  border-bottom: 1px solid rgba(201, 146, 42, 0.2);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 .nav-logo {
@@ -292,9 +292,9 @@ a {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom,
-      rgba(26, 16, 8, 0.05) 0%,
-      rgba(26, 16, 8, 0.50) 45%,
-      rgba(26, 16, 8, 0.97) 100%);
+      rgba(18, 18, 16, 0.05) 0%,
+      rgba(18, 18, 16, 0.50) 45%,
+      rgba(18, 18, 16, 0.97) 100%);
   z-index: 1;
 }
 
@@ -384,7 +384,7 @@ a {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 0 28px rgba(255, 107, 0, 0.55);
+  box-shadow: 0 0 28px rgba(245, 203, 0, 0.55);
   animation: slideUp 0.7s ease both, pulse 2.5s ease-in-out 2s infinite;
   animation-delay: 0.95s;
 }
@@ -414,7 +414,7 @@ a {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(26, 16, 8, 0.55);
+  background: rgba(18, 18, 16, 0.55);
   z-index: 1;
 }
 
@@ -446,14 +446,14 @@ a {
 .story-stats {
   display: flex;
   gap: 0;
-  border-top: 1px solid rgba(201, 146, 42, 0.3);
+  border-top: 1px solid rgba(255, 215, 0, 0.3);
   padding-top: 28px;
 }
 
 .stat-item {
   flex: 1;
   text-align: center;
-  border-right: 1px solid rgba(201, 146, 42, 0.3);
+  border-right: 1px solid rgba(255, 215, 0, 0.3);
   padding: 0 8px;
 }
 
@@ -476,7 +476,7 @@ a {
 /* ━━━━ COMBOS SPOTLIGHT SECTION ━━━━ */
 .combos-section {
   padding: 72px 0;
-  background: radial-gradient(ellipse at 50% 30%, #2C1A0E 0%, #1A1008 70%);
+  background: radial-gradient(ellipse at 50% 30%, #1e1e14 0%, #121210 70%);
   position: relative;
   overflow: hidden;
 }
@@ -518,7 +518,7 @@ a {
   border-radius: 18px;
   overflow: hidden;
   scroll-snap-align: start;
-  border: 1px solid rgba(201, 146, 42, 0.25);
+  border: 1px solid rgba(255, 215, 0, 0.25);
   flex-shrink: 0;
   position: relative;
   z-index: 1;
@@ -590,7 +590,7 @@ a {
 
 .btn-order-wa:active {
   transform: scale(0.97);
-  box-shadow: 0 0 20px rgba(255, 107, 0, 0.4);
+  box-shadow: 0 0 20px rgba(245, 203, 0, 0.4);
 }
 
 /* ━━━━ MENU CARDS (shared across all menu pages) ━━━━ */
@@ -621,7 +621,7 @@ a {
   white-space: nowrap;
   padding: 8px 18px;
   border-radius: 24px;
-  border: 1px solid rgba(201, 146, 42, 0.35);
+  border: 1px solid rgba(255, 215, 0, 0.35);
   font-size: 13px;
   font-family: 'Poppins', sans-serif;
   color: var(--white-smoke);
@@ -654,7 +654,7 @@ a {
   background: var(--card-bg);
   border-radius: 14px;
   padding: 14px;
-  border: 1px solid rgba(201, 146, 42, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.15);
   transition: border-color 0.2s;
 }
 
@@ -805,11 +805,11 @@ a {
   left: 0;
   right: 0;
   height: 64px;
-  background: rgba(26, 16, 8, 0.97);
+  background: rgba(18, 18, 16, 0.97);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   display: flex;
-  border-top: 1px solid rgba(201, 146, 42, 0.2);
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
   z-index: 100;
 }
 
@@ -865,7 +865,7 @@ a {
   padding: 80px 24px 24px;
   transform: translateX(100%);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  border-left: 1px solid rgba(201, 146, 42, 0.2);
+  border-left: 1px solid rgba(255, 215, 0, 0.2);
   overflow-y: auto;
 }
 
@@ -879,7 +879,7 @@ a {
   font-family: 'Playfair Display', serif;
   font-size: 20px;
   color: var(--cream);
-  border-bottom: 1px solid rgba(201, 146, 42, 0.12);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.12);
   transition: color 0.2s;
 }
 
@@ -917,10 +917,10 @@ a {
 
 /* ━━━━ FOOTER ━━━━ */
 .footer {
-  background: #100800;
+  background: #0e0e0c;
   padding: 48px 24px 80px;
   text-align: center;
-  border-top: 1px solid rgba(201, 146, 42, 0.15);
+  border-top: 1px solid rgba(255, 215, 0, 0.15);
 }
 
 .footer-logo {
@@ -1125,7 +1125,7 @@ a {
   border-radius: 18px;
   padding: 28px 16px;
   text-align: center;
-  border: 1px solid rgba(201, 146, 42, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.15);
   transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
   text-decoration: none;
   display: block;
@@ -1134,7 +1134,7 @@ a {
 .menu-hub-card:hover {
   transform: translateY(-4px);
   border-color: var(--saffron);
-  box-shadow: 0 8px 32px rgba(201, 146, 42, 0.15);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
 }
 
 .hub-card-icon {
@@ -1191,7 +1191,7 @@ a {
   background: var(--card-bg);
   border-radius: 14px;
   padding: 20px;
-  border: 1px solid rgba(201, 146, 42, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.15);
   text-align: center;
 }
 

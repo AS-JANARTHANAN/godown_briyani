@@ -10,7 +10,7 @@ def menu_section_html(title, items, is_veg=False):
     dot_color = "var(--leaf)" if is_veg else "var(--red-dot)"
     
     for name, price, badge in items:
-        badge_html = f" <span style='font-size:0.8rem; background:rgba(232,105,42,0.1); color:var(--color-primary); padding:2px 6px; border-radius:4px; margin-left:8px;'>{badge}</span>" if badge else ""
+        badge_html = f" <span style='font-size:0.8rem; background:rgba(245,203,0,0.1); color:var(--color-primary); padding:2px 6px; border-radius:4px; margin-left:8px;'>{badge}</span>" if badge else ""
         html += f"""
         <div class="dish-row">
             <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid {dot_color}; margin-right:8px; border-radius:2px;"></span>{name}{badge_html}</span>

@@ -52,7 +52,7 @@ menu_content = f"""
         <div class="menu-card-from">from ₹100</div>
       </a>
       <a href="gravy.html" class="menu-card" style="text-align:center;">
-        <svg viewBox="0 0 40 40" fill="none" class="i" stroke="#e8692a" stroke-width="1.5" style="width:40px;height:40px;margin-bottom:8px;"><path d="M10 32 C14 20 30 10 32 8 C30 10 32 26 20 30 C14 32 10 32 10 32Z"/><path d="M10 32 L22 20"/></svg>
+        <svg viewBox="0 0 40 40" fill="none" class="i" stroke="#F5CB00" stroke-width="1.5" style="width:40px;height:40px;margin-bottom:8px;"><path d="M10 32 C14 20 30 10 32 8 C30 10 32 26 20 30 C14 32 10 32 10 32Z"/><path d="M10 32 L22 20"/></svg>
         <div class="menu-card-name">Gravies</div>
         <div class="menu-card-from">from ₹170</div>
       </a>
@@ -62,17 +62,17 @@ menu_content = f"""
         <div class="menu-card-from">from ₹140</div>
       </a>
       <a href="breads.html" class="menu-card" style="text-align:center;">
-        <svg viewBox="0 0 40 40" fill="none" class="i" stroke="#e8692a" stroke-width="1.5" style="width:40px;height:40px;margin-bottom:8px;"><ellipse cx="20" cy="20" rx="14" ry="10"/></svg>
+        <svg viewBox="0 0 40 40" fill="none" class="i" stroke="#F5CB00" stroke-width="1.5" style="width:40px;height:40px;margin-bottom:8px;"><ellipse cx="20" cy="20" rx="14" ry="10"/></svg>
         <div class="menu-card-name">Indian Breads</div>
         <div class="menu-card-from">from ₹60</div>
       </a>
       <a href="pulao.html" class="menu-card" style="text-align:center;">
-        <svg viewBox="0 0 40 40" fill="none" class="i" stroke="#e8692a" stroke-width="1.5" style="width:40px;height:40px;margin-bottom:8px;"><path d="M10 26 C10 19 13 14 20 13 C27 14 30 19 30 26"/></svg>
+        <svg viewBox="0 0 40 40" fill="none" class="i" stroke="#F5CB00" stroke-width="1.5" style="width:40px;height:40px;margin-bottom:8px;"><path d="M10 26 C10 19 13 14 20 13 C27 14 30 19 30 26"/></svg>
         <div class="menu-card-name">Pulao</div>
         <div class="menu-card-from">from ₹170</div>
       </a>
       <a href="eggs.html" class="menu-card" style="text-align:center;">
-        <svg viewBox="0 0 40 40" fill="none" class="i" stroke="#e8692a" stroke-width="1.5" style="width:40px;height:40px;margin-bottom:8px;"><ellipse cx="20" cy="20" rx="8" ry="12"/></svg>
+        <svg viewBox="0 0 40 40" fill="none" class="i" stroke="#F5CB00" stroke-width="1.5" style="width:40px;height:40px;margin-bottom:8px;"><ellipse cx="20" cy="20" rx="8" ry="12"/></svg>
         <div class="menu-card-name">Eggs</div>
         <div class="menu-card-from">from ₹20</div>
       </a>
