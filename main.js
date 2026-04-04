@@ -4,8 +4,8 @@
    CONFIG — update with real shop number
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 const CONFIG = {
-  whatsapp: '91XXXXXXXXXX',   // ← replace with real number
-  shopName: 'Godown Briyani',
+  whatsapp: '917708863397',
+  shopName: 'Bhai Biryani Godown',
 };
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -1,297 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fried Rice & Noodles Trichy | Godown Briyani — Chicken, Prawn, Mixed Fried Rice</title>
-    <meta name="description"
-        content="Wok-tossed fried rice and noodles in Trichy — chicken, prawn, mixed, egg schezwan and more. Order at Godown Briyani on WhatsApp.">
-    <meta name="keywords"
-        content="fried rice trichy, noodles trichy, chicken fried rice, prawn fried rice, schezwan noodles trichy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fried Rice & Noodles | Bhai Biryani Godown Trichy</title>
+    <meta name="description" content="Wok-tossed chicken, prawn, and veg fried rice and noodles at BBG.">
+    <meta name="keywords" content="">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yourdomain.com/fried-rice-noodles.html">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Fried Rice & Noodles | Godown Briyani Trichy">
-    <meta property="og:description" content="Wok-tossed fried rice and noodles — chicken, prawn, mixed and more.">
-    <meta property="og:image" content="https://yourdomain.com/images/theme/og-image.webp">
-    <meta property="og:url" content="https://yourdomain.com/fried-rice-noodles.html">
-    <link rel="icon" type="image/webp" href="images/logo.webp">
-    <link rel="apple-touch-icon" href="images/logo.webp">
+    
+    <meta property="og:type" content="restaurant">
+    <meta property="og:site_name" content="Bhai Biryani Godown">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Fried Rice & Noodles | Bhai Biryani Godown Trichy">
+    <meta property="og:description" content="Wok-tossed chicken, prawn, and veg fried rice and noodles at BBG.">
+    <meta property="og:image" content="https://yourdomain.com/images/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="icon" type="image/png" href="images/bbg-logo-filled.png">
+    <link rel="apple-touch-icon" href="images/bbg-logo-filled.png">
     <link rel="stylesheet" href="styles.css">
-    <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yourdomain.com/"},{"@type":"ListItem","position":2,"name":"Fried Rice & Noodles","item":"https://yourdomain.com/fried-rice-noodles.html"}]}
-  </script>
+    
 </head>
-
 <body class="page-body-padding">
-    <nav class="top-nav"><a href="index.html"><img src="images/logo.webp" alt="Godown Briyani Logo"
-                class="nav-logo"></a><button class="nav-order-btn" onclick="generalWhatsAppOrder()"><svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Order</button><button class="hamburger" id="hamburger"
-            aria-expanded="false"><span></span><span></span><span></span></button></nav>
+
+    <!-- ═══ TOP NAV ═══ -->
+    <nav class="top-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+            <a href="index.html" class="nav-logo-link" aria-label="Bhai Biryani Godown Home">
+                <img src="images/bbg-logo-filled.png" alt="Bhai Biryani Godown logo — Since 1977 Trichy" class="nav-logo">
+            </a>
+            
+            <div class="desktop-links" style="display:none;">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="platters.html">Platters</a>
+                <a href="bulk-orders.html">Bulk Orders</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══ MOBILE MENU DRAWER ═══ -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-        <div class="mobile-menu-panel"><a href="index.html"><svg class="i" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a><a href="menu.html"><svg class="i" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg> Full Menu</a><a
-                href="biryani.html"><svg class="i" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg> Biryani</a><a href="combos.html"><svg class="i" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Combos</a><a href="starters.html"><svg class="i" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
-                Starters</a><a href="fried-rice-noodles.html"><svg class="i" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg> Fried Rice & Noodles</a><a href="shawarma.html"><svg class="i" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
-                Shawarma</a><a href="fish-seafood.html"><svg class="i" viewBox="0 0 24 24"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6-3.56 0-7.56-2.53-8.5-6Z"/><circle cx="12" cy="12" r="2"/></svg> Fish & Seafood</a><a href="tandoori-bbq.html"><svg class="i" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> Tandoori &
-                BBQ</a><a href="veg.html"><svg class="i" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Veg Specials</a><a href="sweets.html"><svg class="i" viewBox="0 0 24 24"><path d="m9.5 7.5-2 2a4.95 4.95 0 1 0 7 7l2-2a4.95 4.95 0 1 0-7-7Z"/><path d="M14 6.5v10"/><path d="M10 7.5v10"/></svg> Sweets</a><a href="about.html"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> About Us</a><a href="contact.html"><svg class="i" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Contact & Location</a></div>
+        <div class="mobile-menu-panel">
+            <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="i"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a>
+            <a href="menu.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="i"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg> Full Menu</a>
+            <a href="biryani.html"><svg viewBox="0 0 40 40" fill="none" stroke="#e8692a" stroke-width="1.5" class="i" style="width:40px;height:40px"><ellipse cx="20" cy="26" rx="14" ry="7"/><path d="M6 26 C6 34 34 34 34 26"/><path d="M10 26 C10 19 13 14 20 13 C27 14 30 19 30 26"/><line x1="20" y1="13" x2="20" y2="9"/><line x1="16" y1="10" x2="20" y2="9"/><line x1="24" y1="10" x2="20" y2="9"/></svg> Biryani</a>
+            <a href="starters.html"><svg viewBox="0 0 40 40" fill="none" stroke="#e8692a" stroke-width="1.5" class="i" style="width:40px;height:40px"><ellipse cx="26" cy="14" rx="8" ry="6" transform="rotate(-30 26 14)"/><path d="M21 18 L12 30"/><line x1="10" y1="30" x2="14" y2="34"/><line x1="12" y1="28" x2="16" y2="32"/></svg> Starters</a>
+            <a href="fried-rice-noodles.html"><svg viewBox="0 0 40 40" fill="none" stroke="#e8692a" stroke-width="1.5" class="i" style="width:40px;height:40px"><path d="M8 20 C8 30 32 30 32 20"/><ellipse cx="20" cy="20" rx="12" ry="4"/><line x1="15" y1="10" x2="18" y2="22"/><line x1="25" y1="9" x2="22" y2="22"/></svg> Fried Rice & Noodles</a>
+            <a href="soup.html"><svg viewBox="0 0 40 40" fill="none" stroke="#e8692a" stroke-width="1.5" class="i" style="width:40px;height:40px"><path d="M8 24 C8 32 32 32 32 24 L30 20 L10 20 Z"/><line x1="14" y1="12" x2="14" y2="16"/><line x1="20" y1="10" x2="20" y2="16"/><line x1="26" y1="12" x2="26" y2="16"/></svg> Soups</a>
+            <a href="tandoori-bbq.html"><svg viewBox="0 0 40 40" fill="none" stroke="#e8692a" stroke-width="1.5" class="i" style="width:40px;height:40px"><path d="M20 8 C20 8 28 16 28 23 C28 28 24 32 20 32 C16 32 12 28 12 23 C12 16 20 8 20 8Z"/><path d="M20 18 C20 18 24 22 24 25 C24 27 22 29 20 29"/></svg> Tandoori & BBQ</a>
+            <a href="gravy.html"><svg viewBox="0 0 40 40" fill="none" stroke="#e8692a" stroke-width="1.5" class="i" style="width:40px;height:40px"><path d="M10 32 C14 20 30 10 32 8 C30 10 32 26 20 30 C14 32 10 32 10 32Z"/><path d="M10 32 L22 20"/></svg> Gravies</a>
+            <a href="platters.html"><svg viewBox="0 0 40 40" fill="none" stroke="#e8692a" stroke-width="1.5" class="i" style="width:40px;height:40px"><circle cx="20" cy="22" r="14"/><circle cx="20" cy="22" r="10"/><ellipse cx="20" cy="10" rx="5" ry="2"/></svg> BBG Platters</a>
+            <a href="bulk-orders.html"><svg viewBox="0 0 40 40" fill="none" stroke="#e8692a" stroke-width="1.5" class="i" style="width:40px;height:40px"><rect x="8" y="12" width="24" height="22" rx="2"/><line x1="8" y1="18" x2="32" y2="18"/><line x1="15" y1="8" x2="15" y2="14"/><line x1="25" y1="8" x2="25" y2="14"/><rect x="14" y="22" width="4" height="4"/><rect x="22" y="22" width="4" height="4"/></svg> Bulk / Party Orders</a>
+            <a href="climax.html"><svg viewBox="0 0 40 40" fill="none" stroke="#e8692a" stroke-width="1.5" class="i" style="width:40px;height:40px"><path d="M10 22 C10 30 30 30 30 22"/><ellipse cx="20" cy="22" rx="10" ry="4"/><path d="M26 12 C30 10 34 14 30 18 L22 24"/></svg> Sweets & Drinks</a>
+            <a href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="i"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> About Us</a>
+            <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="i"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Contact & Location</a>
+        </div>
     </div>
 
-    <section class="page-hero">
-        <div class="page-hero-bg" data-parallax-speed="0.3"
-            style="background-image: url('images/dishes/friedrice/chicken-fried-rice.webp');"></div>
-        <div class="page-hero-overlay"></div>
-        <div class="page-hero-content">
-            <p class="page-hero-sub">Wok Tossed Perfection</p>
-            <h1 class="page-hero-title">FRIED RICE & NOODLES</h1>
+    <!-- ═══ PAGE CONTENT ═══ -->
+    <div class='breadcrumb'><a href='index.html'>Home</a> &nbsp;/&nbsp; Fried Rice & Noodles</div><section style='padding: 60px 20px;'>
+<div style="margin-bottom: 32px;">
+    <h3 style="color:var(--color-gold); font-family:'Playfair Display', serif; font-size:1.5rem; margin-bottom:16px;">Fried Rice</h3>
+    <div class="menu-grid">
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Veg Fried Rice</span>
+            <span class="dish-price">₹140</span>
         </div>
-    </section>
-    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Fried Rice & Noodles</div>
 
-    <section class="menu-section">
-        <div class="category-tabs">
-            <button class="tab-pill active" data-filter="all">All</button>
-            <button class="tab-pill" data-filter="friedrice">Fried Rice</button>
-            <button class="tab-pill" data-filter="noodles">Noodles</button>
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Mushroom Fried Rice</span>
+            <span class="dish-price">₹150</span>
         </div>
-        <div class="menu-grid">
 
-            <!-- FRIED RICE -->
-            <article class="menu-card reveal" data-category="friedrice">
-                <div class="menu-card-img-wrap"><img src="images/dishes/friedrice/veg-fried-rice.webp"
-                        alt="Vegetable Fried Rice — Veg Fried Rice Trichy" class="menu-card-img" loading="lazy"
-                        width="84" height="84"><span class="veg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Vegetable Fried Rice</h3>
-                    <p class="menu-dish-desc">Wok-tossed rice with fresh vegetables and aromatic seasonings.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹218</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Vegetable Fried Rice','₹218')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="friedrice">
-                <div class="menu-card-img-wrap"><img src="images/dishes/friedrice/egg-schezwan-fried-rice.webp"
-                        alt="Egg Schezwan Fried Rice Trichy" class="menu-card-img" loading="lazy" width="84"
-                        height="84"><span class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Egg Schezwan Fried Rice</h3>
-                    <p class="menu-dish-desc">Spicy schezwan fried rice with scrambled eggs.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹228</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Egg Schezwan Fried Rice','₹228')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="friedrice">
-                <div class="menu-card-img-wrap"><img src="images/dishes/friedrice/chicken-schezwan-fried-rice.webp"
-                        alt="Chicken Schezwan Fried Rice Trichy" class="menu-card-img" loading="lazy" width="84"
-                        height="84"><span class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Chicken Schezwan Fried Rice</h3>
-                    <p class="menu-dish-desc">Fiery schezwan fried rice with tender chicken strips.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹248</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Chicken Schezwan Fried Rice','₹248')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="friedrice">
-                <div class="menu-card-img-wrap"><img src="images/dishes/friedrice/mushroom-fried-rice.webp"
-                        alt="Mushroom Fried Rice Trichy" class="menu-card-img" loading="lazy" width="84"
-                        height="84"><span class="veg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Mushroom Fried Rice</h3>
-                    <p class="menu-dish-desc">Fragrant fried rice with sautéed mushrooms.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹249</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Mushroom Fried Rice','₹249')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="friedrice">
-                <div class="menu-card-img-wrap"><img src="images/dishes/friedrice/chicken-fried-rice.webp"
-                        alt="Chicken Fried Rice Trichy" class="menu-card-img" loading="lazy" width="84"
-                        height="84"><span class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Chicken Fried Rice</h3>
-                    <p class="menu-dish-desc">Classic wok-tossed fried rice with chicken and veggies.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹219</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Chicken Fried Rice','₹219')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="friedrice">
-                <div class="menu-card-img-wrap"><img src="images/dishes/friedrice/prawn-fried-rice.webp"
-                        alt="Prawn Fried Rice Trichy" class="menu-card-img" loading="lazy" width="84" height="84"><span
-                        class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Prawn Fried Rice</h3>
-                    <p class="menu-dish-desc">Fried rice loaded with succulent prawns.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹329</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Prawn Fried Rice','₹329')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="friedrice">
-                <div class="menu-card-img-wrap"><img src="images/dishes/friedrice/mixed-fried-rice.webp"
-                        alt="Mixed Fried Rice — Egg Chicken Prawns Fish Mutton Trichy" class="menu-card-img"
-                        loading="lazy" width="84" height="84"><span class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Mixed Fried Rice</h3>
-                    <p class="menu-dish-desc">Loaded with egg, chicken, prawns, fish and mutton.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹359</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Mixed Fried Rice','₹359')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="friedrice">
-                <div class="menu-card-img-wrap"><img src="images/dishes/friedrice/paneer-fried-rice.webp"
-                        alt="Paneer Fried Rice Trichy" class="menu-card-img" loading="lazy" width="84" height="84"><span
-                        class="veg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Paneer Fried Rice</h3>
-                    <p class="menu-dish-desc">Fried rice with golden paneer cubes and veggies.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹249</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Paneer Fried Rice','₹249')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="friedrice">
-                <div class="menu-card-img-wrap"><img src="images/dishes/friedrice/egg-schezwan-fried-rice.webp"
-                        alt="Egg Fried Rice Trichy" class="menu-card-img" loading="lazy" width="84" height="84"><span
-                        class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Egg Fried Rice</h3>
-                    <p class="menu-dish-desc">Classic fried rice with fluffy scrambled eggs.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹199</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Egg Fried Rice','₹199')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <!-- NOODLES -->
-            <article class="menu-card reveal" data-category="noodles">
-                <div class="menu-card-img-wrap"><img src="images/dishes/noodles/veg-noodles.webp"
-                        alt="Veg Noodles Trichy" class="menu-card-img" loading="lazy" width="84" height="84"><span
-                        class="veg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Veg Noodles</h3>
-                    <p class="menu-dish-desc">Stir-fried noodles with fresh vegetables.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹199</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Veg Noodles','₹199')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="noodles">
-                <div class="menu-card-img-wrap"><img src="images/dishes/noodles/paneer-noodles.webp"
-                        alt="Paneer Noodles Trichy" class="menu-card-img" loading="lazy" width="84" height="84"><span
-                        class="veg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Paneer Noodles</h3>
-                    <p class="menu-dish-desc">Stir-fried noodles with paneer cubes.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹249</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Paneer Noodles','₹249')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="noodles">
-                <div class="menu-card-img-wrap"><img src="images/dishes/noodles/mushroom-noodles.webp"
-                        alt="Mushroom Noodles Trichy" class="menu-card-img" loading="lazy" width="84" height="84"><span
-                        class="veg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Mushroom Noodles</h3>
-                    <p class="menu-dish-desc">Stir-fried noodles with sautéed mushrooms.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹249</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Mushroom Noodles','₹249')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="noodles">
-                <div class="menu-card-img-wrap"><img src="images/dishes/noodles/egg-noodles.webp"
-                        alt="Egg Noodles Trichy" class="menu-card-img" loading="lazy" width="84" height="84"><span
-                        class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Egg Noodles</h3>
-                    <p class="menu-dish-desc">Noodles tossed with scrambled eggs and veggies.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹199</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Egg Noodles','₹199')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="noodles">
-                <div class="menu-card-img-wrap"><img src="images/dishes/noodles/egg-schezwan-noodles.webp"
-                        alt="Egg Schezwan Noodles Trichy" class="menu-card-img" loading="lazy" width="84"
-                        height="84"><span class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Egg Schezwan Noodles</h3>
-                    <p class="menu-dish-desc">Spicy schezwan noodles with eggs.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹229</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Egg Schezwan Noodles','₹229')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="noodles">
-                <div class="menu-card-img-wrap"><img src="images/dishes/noodles/chicken-noodles.webp"
-                        alt="Chicken Noodles Trichy" class="menu-card-img" loading="lazy" width="84" height="84"><span
-                        class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Chicken Noodles</h3>
-                    <p class="menu-dish-desc">Stir-fried noodles with chicken strips.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹219</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Chicken Noodles','₹219')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="noodles">
-                <div class="menu-card-img-wrap"><img src="images/dishes/noodles/chicken-schezwan-noodles.webp"
-                        alt="Chicken Schezwan Noodles Trichy" class="menu-card-img" loading="lazy" width="84"
-                        height="84"><span class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Chicken Schezwan Noodles</h3>
-                    <p class="menu-dish-desc">Fiery schezwan noodles with tender chicken.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹249</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Chicken Schezwan Noodles','₹249')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="noodles">
-                <div class="menu-card-img-wrap"><img src="images/dishes/noodles/mixed-noodles.webp"
-                        alt="Mixed Noodles — Egg Fish Chicken Mutton Prawns Trichy" class="menu-card-img" loading="lazy"
-                        width="84" height="84"><span class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Mixed Noodles</h3>
-                    <p class="menu-dish-desc">Noodles with egg, fish, chicken, mutton and prawns.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹359</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Mixed Noodles','₹359')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
-            <article class="menu-card reveal" data-category="noodles">
-                <div class="menu-card-img-wrap"><img src="images/dishes/noodles/prawn-noodles.webp"
-                        alt="Prawn Noodles Trichy" class="menu-card-img" loading="lazy" width="84" height="84"><span
-                        class="nonveg-dot"></span></div>
-                <div class="menu-info">
-                    <h3 class="menu-dish-name">Prawn Noodles</h3>
-                    <p class="menu-dish-desc">Stir-fried noodles with succulent prawns.</p>
-                    <div class="menu-card-footer"><span class="dish-price">₹329</span><button class="btn-order-small"
-                            onclick="orderOnWhatsApp('Prawn Noodles','₹329')">Order <svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></button></div>
-                </div>
-            </article>
-
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Paneer Fried Rice</span>
+            <span class="dish-price">₹150</span>
         </div>
-    </section>
 
-    <footer class="footer"><img src="images/logo.webp" alt="Godown Briyani" class="footer-logo">
-        <p class="footer-tagline">"Cooked over fire, served with love — Trichy"</p><button class="footer-wa-btn"
-            onclick="generalWhatsAppOrder()"><svg width="22" height="22" viewBox="0 0 24 24" fill="white">
-                <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>Order on WhatsApp</button>
-        <div class="footer-links"><a href="about.html">About</a><a href="menu.html">Menu</a><a
-                href="contact.html">Location</a></div>
-        <p class="footer-copy">© 2025 Godown Briyani. All rights reserved. Trichy, Tamil Nadu.</p>
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Egg Fried Rice</span>
+            <span class="dish-price">₹150</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Chicken Fried Rice</span>
+            <span class="dish-price">₹170</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Prawn Fried Rice</span>
+            <span class="dish-price">₹200</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Mixed Fried Rice</span>
+            <span class="dish-price">₹250</span>
+        </div>
+
+    </div>
+</div>
+
+<div style="margin-bottom: 32px;">
+    <h3 style="color:var(--color-gold); font-family:'Playfair Display', serif; font-size:1.5rem; margin-bottom:16px;">Noodles</h3>
+    <div class="menu-grid">
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Veg Fried Noodles</span>
+            <span class="dish-price">₹140</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Mushroom Fried Noodles</span>
+            <span class="dish-price">₹150</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Paneer Fried Noodles</span>
+            <span class="dish-price">₹150</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Egg Fried Noodles</span>
+            <span class="dish-price">₹150</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Chicken Fried Noodles</span>
+            <span class="dish-price">₹170</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Prawn Fried Noodles</span>
+            <span class="dish-price">₹200</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Mixed Fried Noodles</span>
+            <span class="dish-price">₹250</span>
+        </div>
+
+    </div>
+</div>
+
+<div style="margin-bottom: 32px;">
+    <h3 style="color:var(--color-gold); font-family:'Playfair Display', serif; font-size:1.5rem; margin-bottom:16px;">Schezwan / Manchow / Mongolian</h3>
+    <div class="menu-grid">
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Veg</span>
+            <span class="dish-price">₹170</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Mushroom</span>
+            <span class="dish-price">₹190</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Paneer</span>
+            <span class="dish-price">₹210</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Egg</span>
+            <span class="dish-price">₹180</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Chicken</span>
+            <span class="dish-price">₹200</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Prawn</span>
+            <span class="dish-price">₹230</span>
+        </div>
+
+        <div class="dish-row">
+            <span class="dish-name"><span style="display:inline-block; width:12px; height:12px; border:2px solid var(--red-dot); margin-right:8px; border-radius:2px;"></span>Mixed</span>
+            <span class="dish-price">₹280</span>
+        </div>
+
+    </div>
+</div>
+</section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer" role="contentinfo">
+        <img src="images/bbg-logo-filled.png" alt="Bhai Biryani Godown logo — Since 1977 Trichy" class="footer-logo">
+        <p class="footer-tagline">"Cooked over fire, served with love — Trichy"</p>
+        <button class="footer-wa-btn" onclick="generalWhatsAppOrder()" aria-label="Order on WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+            Order on WhatsApp
+        </button>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p class="footer-copy">© 2025 Bhai Biryani Godown. All rights reserved.</p>
+        <p class="footer-copy" style="opacity: 0.5;">Trichy's Seeraga Samba Biryani · Since 1977<br>All prices subject to 5% GST</p>
+        <p class="footer-copy" style="opacity: 0.7; margin-top: 16px;">Designed by <a href="https://javia.studio" target="_blank" style="color:var(--color-gold); text-decoration:none; font-weight:bold;">jAvia</a></p>
     </footer>
-    <nav class="bottom-nav"><a href="index.html"><span class="icon"><svg class="i" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>Home</a><a href="menu.html"><span
-                class="icon"><svg class="i" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></span>Menu</a><a href="#" onclick="generalWhatsAppOrder(); return false;"><span
-                class="icon" style="color: var(--saffron);"><svg class="i" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>Order</a><a href="contact.html"><span
-                class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Find Us</a></nav>
+
+    <!-- ═══ MOBILE BOTTOM NAV ═══ -->
+    <nav class="bottom-nav">
+        <a href="index.html">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="i"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+            Home
+        </a>
+        <a href="menu.html">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="i"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></span>
+            Menu
+        </a>
+        <a href="bulk-orders.html">
+            <span class="icon"><svg viewBox="0 0 40 40" fill="none" stroke="#e8692a" stroke-width="1.5" class="i" style="width:40px;height:40px"><rect x="8" y="12" width="24" height="22" rx="2"/><line x1="8" y1="18" x2="32" y2="18"/><line x1="15" y1="8" x2="15" y2="14"/><line x1="25" y1="8" x2="25" y2="14"/><rect x="14" y="22" width="4" height="4"/><rect x="22" y="22" width="4" height="4"/></svg></span>
+            Bulk
+        </a>
+        <a href="contact.html">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="i"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            Find Us
+        </a>
+    </nav>
+
+    <!-- ═══ WHATSAPP FLOAT ═══ -->
+    <a href="https://wa.me/917708863397?text=Hi%20Bhai%20Biryani%20Godown%2C%20I%20would%20like%20to%20place%20an%20order." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+    </a>
+
     <script src="main.js"></script>
 </body>
-
 </html>
