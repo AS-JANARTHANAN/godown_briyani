@@ -2980,16 +2980,35 @@ img {
 }
 
 .branches-grid {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;  /* 2 columns on mobile */
-  gap: 10px !important;
-  align-items: start !important;
+  display: flex !important;
+  gap: 12px !important;
+  padding: 0 16px 16px !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory !important;
+  -webkit-overflow-scrolling: touch !important;
+  align-items: stretch !important;
+}
+
+.branches-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.branches-grid .branch-card {
+  flex: 0 0 75% !important;
+  min-width: 220px !important;
+  scroll-snap-align: center !important;
 }
 
 @media (min-width: 768px) {
   .branches-grid {
+    display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 16px !important;
+    overflow-x: visible !important;
+  }
+  .branches-grid .branch-card {
+    flex: auto !important;
+    min-width: 0 !important;
   }
 }
 
@@ -3327,62 +3346,157 @@ button[class*="order"] {
 }
 
 /* ════════════════════════════════════════════════
-   PATCH 7 — BRANCH GRID: 2-COL MOBILE, 3-COL DESKTOP
+   PATCH 7 — BRANCH GRID: HORIZONTAL SCROLL MOBILE, 3-COL DESKTOP
 ════════════════════════════════════════════════ */
 
 .branches-grid {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 10px !important;
-  padding: 0 12px !important;
-  align-items: start !important;
+  display: flex !important;
+  gap: 12px !important;
+  padding: 0 16px 16px !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.branches-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.branches-grid .branch-card {
+  flex: 0 0 75% !important;
+  min-width: 220px !important;
+  scroll-snap-align: center !important;
 }
 
 @media (min-width: 768px) {
   .branches-grid {
+    display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
     padding: 0 24px !important;
     gap: 16px !important;
+    overflow-x: visible !important;
+  }
+  .branches-grid .branch-card {
+    flex: auto !important;
+    min-width: 0 !important;
   }
 }
 
-/* Hide button text on mobile — icon only */
-.branch-btn span,
-.branch-btn text {
+/* ━━━━ INSTAGRAM REELS SCROLL ━━━━ */
+.reels-scroll {
+  display: flex;
+  gap: 16px;
+  padding: 0 16px 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.reels-scroll::-webkit-scrollbar {
   display: none;
 }
 
-/* Target direct text nodes: use font-size 0 trick */
-@media (max-width: 767px) {
-  .branch-btn {
-    font-size: 0 !important;
-    padding: 10px !important;
-    gap: 0 !important;
-  }
-  .branch-btn svg {
-    width: 18px !important;
-    height: 18px !important;
-  }
-  .branch-actions .btn-whatsapp {
-    font-size: 0 !important;
-    padding: 10px !important;
-    gap: 0 !important;
-  }
-  .branch-actions .btn-whatsapp svg {
-    width: 18px !important;
-    height: 18px !important;
-  }
+.reel-card {
+  flex: 0 0 75%;
+  min-width: 260px;
+  max-width: 350px;
+  scroll-snap-align: center;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
-/* Desktop: show text labels again */
+.reel-video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  display: block;
+}
+
+.reel-tap-area {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.reel-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 3;
+  pointer-events: none;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.reel-play-icon.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.reel-mute-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  backdrop-filter: blur(6px);
+}
+
+.reel-mute-btn svg {
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.reel-insta-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 12px;
+  z-index: 5;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 24px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
 @media (min-width: 768px) {
-  .branch-btn {
-    font-size: 0.75rem !important;
-    gap: 5px !important;
+  .reels-scroll {
+    justify-content: center;
+    overflow-x: visible;
   }
-  .branch-actions .btn-whatsapp {
-    font-size: 0.75rem !important;
-    gap: 5px !important;
+  .reel-card {
+    flex: 0 0 300px;
   }
 }
 

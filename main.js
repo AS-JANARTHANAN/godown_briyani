@@ -149,6 +149,49 @@ function initGallery() {
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   INSTAGRAM REELS — Play/Pause & Mute/Unmute
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+function toggleReelPlay(tapArea) {
+  const card = tapArea.closest('.reel-card');
+  const video = card.querySelector('.reel-video');
+  const icon = card.querySelector('.reel-play-icon');
+  
+  if (video.paused) {
+    video.play();
+    // Show play icon briefly
+    icon.innerHTML = '<svg viewBox="0 0 24 24" fill="white" width="48" height="48"><path d="M8 5v14l11-7z"/></svg>';
+  } else {
+    video.pause();
+    // Show pause icon
+    icon.innerHTML = '<svg viewBox="0 0 24 24" fill="white" width="48" height="48"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>';
+  }
+  
+  // Flash the icon
+  icon.classList.add('show');
+  clearTimeout(icon._hideTimer);
+  icon._hideTimer = setTimeout(() => {
+    icon.classList.remove('show');
+  }, 600);
+}
+
+function toggleReelMute(btn) {
+  const card = btn.closest('.reel-card');
+  const video = card.querySelector('.reel-video');
+  const mutedIcon = btn.querySelector('.icon-muted');
+  const unmutedIcon = btn.querySelector('.icon-unmuted');
+  
+  video.muted = !video.muted;
+  
+  if (video.muted) {
+    mutedIcon.style.display = '';
+    unmutedIcon.style.display = 'none';
+  } else {
+    mutedIcon.style.display = 'none';
+    unmutedIcon.style.display = '';
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    INIT ALL
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 document.addEventListener('DOMContentLoaded', () => {
