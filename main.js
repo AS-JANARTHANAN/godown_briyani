@@ -174,9 +174,13 @@ function toggleReelPlay(tapArea) {
   }, 600);
 }
 
-function toggleReelMute(btn) {
-  const card = btn.closest('.reel-card');
-  const video = card.querySelector('.reel-video');
+function toggleReelMute(btn, event) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  const card = btn.closest('.reel-card') || btn.closest('.yt-card') || btn.parentElement;
+  const video = card.querySelector('video') || card.querySelector('.reel-video');
   const mutedIcon = btn.querySelector('.icon-muted');
   const unmutedIcon = btn.querySelector('.icon-unmuted');
   
