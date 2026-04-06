@@ -616,11 +616,17 @@ a {
 
 .hero-logo {
 
-  width: 110px;
+  width: 140px;
+
+  height: auto;
 
   margin: 0 auto 16px;
 
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8)); /* logo only — keep */
+  border-radius: 0 !important;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.9));
 
   animation: fadeIn 0.8s ease both;
 
@@ -1846,9 +1852,17 @@ a {
 
 .footer-logo {
 
-  width: 90px;
+  width: 120px;
+
+  height: auto;
 
   margin: 0 auto 16px;
+
+  border-radius: 0 !important;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
 
 }
 
@@ -3262,3 +3276,357 @@ button[class*="order"] {
     height: 56px;
   }
 }
+
+/* ════════════════════════════════════════════════
+   PATCH 7 — NAVBAR LOGO + TAMIL TEXT
+════════════════════════════════════════════════ */
+
+/* Navbar brand wrapper */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+/* New sticker-style logo — NO border-radius */
+.navbar-logo {
+  height: 52px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+  border-radius: 0 !important;
+  filter: none;
+  background: transparent;
+}
+
+/* Keep old nav-logo still working for footer / hero */
+.nav-logo {
+  height: 36px;
+  width: auto;
+  border-radius: 0 !important;
+}
+
+/* Tamil shop name next to logo (Image) */
+.navbar-tamil-img {
+  height: 28px;
+  max-width: 60vw;
+  width: auto;
+  object-fit: contain;
+  margin-top: 4px;
+}
+
+@media (max-width: 360px) {
+  .navbar-tamil-img { height: 24px; }
+}
+
+/* ════════════════════════════════════════════════
+   PATCH 7 — BRANCH GRID: 2-COL MOBILE, 3-COL DESKTOP
+════════════════════════════════════════════════ */
+
+.branches-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+  padding: 0 12px !important;
+  align-items: start !important;
+}
+
+@media (min-width: 768px) {
+  .branches-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    padding: 0 24px !important;
+    gap: 16px !important;
+  }
+}
+
+/* Hide button text on mobile — icon only */
+.branch-btn span,
+.branch-btn text {
+  display: none;
+}
+
+/* Target direct text nodes: use font-size 0 trick */
+@media (max-width: 767px) {
+  .branch-btn {
+    font-size: 0 !important;
+    padding: 10px !important;
+    gap: 0 !important;
+  }
+  .branch-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .branch-actions .btn-whatsapp {
+    font-size: 0 !important;
+    padding: 10px !important;
+    gap: 0 !important;
+  }
+  .branch-actions .btn-whatsapp svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+/* Desktop: show text labels again */
+@media (min-width: 768px) {
+  .branch-btn {
+    font-size: 0.75rem !important;
+    gap: 5px !important;
+  }
+  .branch-actions .btn-whatsapp {
+    font-size: 0.75rem !important;
+    gap: 5px !important;
+  }
+}
+
+/* ── Branch action buttons: 3 equal columns ── */
+.branch-actions {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  grid-template-rows: auto !important;
+  gap: 8px !important;
+  margin-top: 12px !important;
+  width: 100% !important;
+}
+
+.branch-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  padding: 10px 6px !important;
+  border-radius: 8px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  transition: all 0.15s ease !important;
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  /* reset inherited sizing */
+  width: auto !important;
+  max-width: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  animation: none !important;
+}
+
+.branch-btn svg {
+  width: 13px !important;
+  height: 13px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Call — orange outline */
+.branch-btn.btn-call {
+  background: transparent !important;
+  color: #e8692a !important;
+  border: 1.5px solid #e8692a !important;
+}
+.branch-btn.btn-call:active,
+.branch-btn.btn-call:hover {
+  background: #e8692a !important;
+  color: #1a0f00 !important;
+}
+
+/* WhatsApp — green outline */
+.branch-actions .btn-whatsapp {
+  grid-column: auto !important;
+  background: transparent !important;
+  color: #25D366 !important;
+  border: 1.5px solid #25D366 !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  padding: 10px 6px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  width: auto !important;
+  max-width: none !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  animation: none !important;
+  box-shadow: none !important;
+}
+.branch-actions .btn-whatsapp:active,
+.branch-actions .btn-whatsapp:hover {
+  background: #25D366 !important;
+  color: #fff !important;
+}
+
+/* Directions — blue outline */
+.branch-btn.btn-directions {
+  grid-column: auto !important;
+  background: transparent !important;
+  color: #60a5fa !important;
+  border: 1.5px solid #60a5fa !important;
+}
+.branch-btn.btn-directions:active,
+.branch-btn.btn-directions:hover {
+  background: #60a5fa !important;
+  color: #1a0f00 !important;
+}
+
+/* ════════════════════════════════════════════════
+   PATCH 7 — PRICE BOARD SECTION
+════════════════════════════════════════════════ */
+
+.priceboard-section {
+  padding: 48px 16px;
+}
+
+.priceboard-note {
+  font-size: 0.8rem;
+  color: #9c7a5a;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.priceboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .priceboard-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .priceboard-extras {
+    grid-column: 1 / -1;
+  }
+}
+
+.priceboard-card {
+  background: #231508;
+  border: 1px solid rgba(232, 105, 42, 0.15);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.priceboard-header {
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.priceboard-header.chicken {
+  background: #e8692a;
+  color: #1a0f00;
+}
+
+.priceboard-header.mutton {
+  background: #7c2d12;
+  color: #f5ede0;
+}
+
+.priceboard-header.extras {
+  background: #231508;
+  color: #c9a060;
+  border-bottom: 1px solid rgba(232, 105, 42, 0.2);
+}
+
+.priceboard-items {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+.pb-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.82rem;
+  color: #c9b89a;
+  gap: 8px;
+}
+
+.pb-row:last-child {
+  border-bottom: none;
+}
+
+.pb-row span:first-child {
+  flex: 1;
+  text-align: left;
+}
+
+.pb-row span:last-child {
+  font-weight: 700;
+  color: #e8692a;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.pb-row.pb-highlight {
+  background: rgba(232, 105, 42, 0.06);
+  border-radius: 6px;
+  padding: 7px 8px;
+  margin: 2px -8px;
+}
+
+.pb-row.pb-highlight span:first-child {
+  color: #f5ede0;
+}
+
+/* Extras two-column layout */
+.priceboard-items.two-col {
+  flex-direction: row;
+  gap: 16px;
+  padding: 12px 16px;
+}
+
+.extras-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.extras-col .pb-row {
+  font-size: 0.78rem;
+}
+
+/* CTA button */
+.priceboard-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.priceboard-order-btn {
+  display: inline-block;
+  background: #e8692a;
+  color: #1a0f00;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.priceboard-order-btn:hover,
+.priceboard-order-btn:active {
+  background: #d45a1e;
+  color: #1a0f00;
+}
+
