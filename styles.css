@@ -615,23 +615,15 @@ a {
 
 
 .hero-logo {
-
+  display: block;
   width: 140px;
-
   height: auto;
-
   margin: 0 auto 16px;
-
   border-radius: 0 !important;
-
   object-fit: contain;
-
   filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.9));
-
   animation: fadeIn 0.8s ease both;
-
   animation-delay: 0.2s;
-
 }
 
 
@@ -3006,8 +2998,21 @@ img {
   border: 1px solid rgba(255, 215, 0, 0.3);
   border-radius: 16px;
   overflow: hidden;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Clickable branch card — anchor tag reset */
+a.branch-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a.branch-card-link:active {
+  transform: scale(0.97);
 }
 
 .branch-card:hover {
@@ -3310,7 +3315,7 @@ button[class*="order"] {
 
 /* Tamil shop name next to logo (Image) */
 .navbar-tamil-img {
-  height: 28px;
+  height: 38px;
   max-width: 60vw;
   width: auto;
   object-fit: contain;
@@ -3318,7 +3323,7 @@ button[class*="order"] {
 }
 
 @media (max-width: 360px) {
-  .navbar-tamil-img { height: 24px; }
+  .navbar-tamil-img { height: 30px; }
 }
 
 /* ════════════════════════════════════════════════
@@ -3423,24 +3428,15 @@ button[class*="order"] {
   flex-shrink: 0 !important;
 }
 
-/* Call — orange outline */
-.branch-btn.btn-call {
-  background: transparent !important;
-  color: #e8692a !important;
-  border: 1.5px solid #e8692a !important;
-}
-.branch-btn.btn-call:active,
-.branch-btn.btn-call:hover {
-  background: #e8692a !important;
-  color: #1a0f00 !important;
-}
-
-/* WhatsApp — green outline */
-.branch-actions .btn-whatsapp {
+/* Branch Action Buttons - Standardized Gold Outline */
+.branch-btn.btn-call,
+.branch-actions .btn-whatsapp,
+.branch-btn.btn-directions {
   grid-column: auto !important;
   background: transparent !important;
-  color: #25D366 !important;
-  border: 1.5px solid #25D366 !important;
+  color: #FFD700 !important;
+  border: 1.5px solid #FFD700 !important;
+  box-shadow: none !important;
   border-radius: 8px !important;
   display: flex !important;
   align-items: center !important;
@@ -3459,24 +3455,15 @@ button[class*="order"] {
   min-height: 0 !important;
   margin: 0 !important;
   animation: none !important;
-  box-shadow: none !important;
-}
-.branch-actions .btn-whatsapp:active,
-.branch-actions .btn-whatsapp:hover {
-  background: #25D366 !important;
-  color: #fff !important;
 }
 
-/* Directions — blue outline */
-.branch-btn.btn-directions {
-  grid-column: auto !important;
-  background: transparent !important;
-  color: #60a5fa !important;
-  border: 1.5px solid #60a5fa !important;
-}
+.branch-btn.btn-call:active,
+.branch-btn.btn-call:hover,
+.branch-actions .btn-whatsapp:active,
+.branch-actions .btn-whatsapp:hover,
 .branch-btn.btn-directions:active,
 .branch-btn.btn-directions:hover {
-  background: #60a5fa !important;
+  background: #FFD700 !important;
   color: #1a0f00 !important;
 }
 
