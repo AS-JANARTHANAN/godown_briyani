@@ -196,6 +196,118 @@ function toggleReelMute(btn, event) {
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   REUSABLE SWIPE DECK — JioHotstar-style stacked cards
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+function initSwipeDeck() {
+  document.querySelectorAll('.swipe-deck').forEach(function(deck) {
+    var dotsContainer = deck.parentElement.querySelector('.swipe-dots');
+    var dots = dotsContainer ? dotsContainer.querySelectorAll('.swipe-dot') : [];
+    var cards = deck.querySelectorAll('.swipe-card');
+    var total = cards.length;
+    if (total === 0) return;
+
+    var current = 0, startX = 0, startY = 0, dragX = 0;
+    var isDragging = false, isHoriz = null, SNAP = 60;
+
+    function layout(animated) {
+      for (var i = 0; i < total; i++) {
+        var c = cards[i];
+        var diff = ((i - current) % total + total) % total;
+
+        if (animated) c.classList.remove('no-transition');
+        else c.classList.add('no-transition');
+
+        if (diff === 0) {
+          c.style.transform = 'translateX(0) translateY(0) scale(1)';
+          c.style.opacity = '1';
+          c.style.zIndex = 10;
+          c.style.pointerEvents = 'auto';
+        } else if (diff === 1) {
+          c.style.transform = 'translateX(20px) translateY(10px) scale(0.95)';
+          c.style.opacity = '1';
+          c.style.zIndex = 9;
+          c.style.pointerEvents = 'none';
+        } else if (diff === 2) {
+          c.style.transform = 'translateX(40px) translateY(20px) scale(0.90)';
+          c.style.opacity = '0.7';
+          c.style.zIndex = 8;
+          c.style.pointerEvents = 'none';
+        } else {
+          c.style.transform = 'translateX(60px) translateY(30px) scale(0.85)';
+          c.style.opacity = '0';
+          c.style.zIndex = 0;
+          c.style.pointerEvents = 'none';
+        }
+      }
+      dots.forEach(function(d, i) { d.classList.toggle('swipe-dot-active', i === current); });
+    }
+
+    function dragFront(dx) {
+      var c = cards[current];
+      c.classList.add('no-transition');
+      c.style.transform = 'translateX(' + dx + 'px) rotate(' + (dx * 0.04) + 'deg) scale(1)';
+      var progress = Math.min(Math.abs(dx) / 200, 1);
+      var nextIdx = (current + 1) % total;
+      var next = cards[nextIdx];
+      next.classList.add('no-transition');
+      next.style.transform = 'translateX(' + (20 - 20 * progress) + 'px) translateY(' + (10 - 10 * progress) + 'px) scale(' + (0.95 + 0.05 * progress) + ')';
+      var next2Idx = (current + 2) % total;
+      if (total > 2) {
+        var next2 = cards[next2Idx];
+        next2.classList.add('no-transition');
+        next2.style.transform = 'translateX(' + (40 - 20 * progress) + 'px) translateY(' + (20 - 10 * progress) + 'px) scale(' + (0.90 + 0.05 * progress) + ')';
+        next2.style.opacity = '' + (0.7 + 0.3 * progress);
+      }
+    }
+
+    function goTo(idx) {
+      current = ((idx % total) + total) % total;
+      layout(true);
+    }
+
+    deck.addEventListener('touchstart', function(e) {
+      startX = e.touches[0].clientX; startY = e.touches[0].clientY;
+      isDragging = true; isHoriz = null; dragX = 0;
+    }, { passive: true });
+
+    deck.addEventListener('touchmove', function(e) {
+      if (!isDragging) return;
+      var dx = e.touches[0].clientX - startX;
+      var dy = e.touches[0].clientY - startY;
+      if (isHoriz === null) isHoriz = Math.abs(dx) > Math.abs(dy);
+      if (!isHoriz) { isDragging = false; layout(true); return; }
+      e.preventDefault(); dragX = dx; dragFront(dragX);
+    }, { passive: false });
+
+    deck.addEventListener('touchend', function() {
+      if (!isDragging) return; isDragging = false;
+      if (Math.abs(dragX) > SNAP) { dragX < 0 ? goTo(current + 1) : goTo(current - 1); }
+      else layout(true);
+      dragX = 0;
+    });
+
+    deck.addEventListener('touchcancel', function() { isDragging = false; layout(true); dragX = 0; });
+
+    deck.addEventListener('mousedown', function(e) {
+      e.preventDefault(); startX = e.clientX; isDragging = true; dragX = 0;
+      deck.classList.add('dragging');
+    });
+    document.addEventListener('mousemove', function(e) {
+      if (!isDragging) return; dragX = e.clientX - startX; dragFront(dragX);
+    });
+    document.addEventListener('mouseup', function() {
+      if (!isDragging) return; isDragging = false;
+      deck.classList.remove('dragging');
+      if (Math.abs(dragX) > SNAP) { dragX < 0 ? goTo(current + 1) : goTo(current - 1); }
+      else layout(true);
+      dragX = 0;
+    });
+
+    layout(false);
+  });
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    INIT ALL
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -205,6 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initMenuFilter();
   initGallery();
+  initSwipeDeck();
 });
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
