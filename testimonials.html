@@ -17,8 +17,8 @@
     <meta property="og:image" content="https://yourdomain.com/images/og-cover.jpg">
     <meta name="twitter:card" content="summary_large_image">
     
-    <link rel="icon" type="image/png" href="images/bbg-logo-new.png">
-    <link rel="apple-touch-icon" href="images/bbg-logo-new.png">
+    <link rel="icon" type="image/png" href="images/bbg-logo-filled.png">
+    <link rel="apple-touch-icon" href="images/bbg-logo-filled.png">
     <link rel="stylesheet" href="styles.css">
 
     <style>
@@ -120,9 +120,9 @@
     <nav class="top-nav" role="navigation" aria-label="Main navigation">
         <div class="nav-container" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
             <a href="index.html" class="navbar-brand nav-logo-link" aria-label="Bhai Biryani Godown Home">
-                <img src="images/bbg-logo-new.png" alt="Bhai Biryani Godown" class="navbar-logo" width="120" height="60">
-                <img src="images/tamil_text_golden_yellow.png" alt="பாய் பிரியாணி குடோன்" class="navbar-tamil-img">
+                <img src="images/bbg-logo-filled.png" alt="Bhai Biryani Godown" class="navbar-logo" width="120" height="60">
             </a>
+            <span class="navbar-brand-text">Bhai Briyani Godown</span>
             
             <div class="desktop-links" style="display:none;">
                 <a href="index.html">Home</a>
@@ -289,74 +289,55 @@
       </div>
     </section>
 
-    <!-- ═══ YOUTUBE SHORTS SECTION ═══ -->
-    <section style="padding: 60px 20px; background:var(--color-surface); text-align:center;">
-      <p class="section-label">Watch Us Cook</p>
-      <h2 class="section-title" style="margin-bottom:32px;">BBG on YouTube</h2>
+    <!-- ═══ INSTAGRAM REELS SECTION ═══ -->
+    <section style="padding: 60px 20px 40px; background:var(--color-bg); text-align:center;">
+      <p class="section-label" style="text-align:center;">Follow Us</p>
+      <h2 class="section-title" style="text-align:center;">Watch Our Reels</h2>
+      <p style="color:var(--color-muted); max-width:600px; margin: 16px auto 32px; line-height:1.6;">Check out our latest reels — the fire, the flavour, the tradition.</p>
+
       <div class="yt-grid">
-        <a href="https://www.youtube.com/watch?v=E-YXVGLZ4gs"
-     target="_blank"
-     rel="noopener"
-     class="yt-card"
-     aria-label="Watch Bhai Biryani Godown review on YouTube">
-    <img
-      src="https://img.youtube.com/vi/E-YXVGLZ4gs/hqdefault.jpg"
-      alt="Bhai Biryani Godown review video Trichy"
-      loading="lazy"
-      width="480"
-      height="360"
-    />
-    <div class="yt-play-badge">
-      <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
-        <path d="M8 5v14l11-7z"/>
-      </svg>
-      Watch on YouTube
-    </div>
-  </a>
-        <a href="https://www.youtube.com/watch?v=twZ-xNVbn7E"
-     target="_blank"
-     rel="noopener"
-     class="yt-card"
-     aria-label="Watch Bhai Biryani Godown review on YouTube">
-    <img
-      src="https://img.youtube.com/vi/twZ-xNVbn7E/hqdefault.jpg"
-      alt="Bhai Biryani Godown review video Trichy"
-      loading="lazy"
-      width="480"
-      height="360"
-    />
-    <div class="yt-play-badge">
-      <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
-        <path d="M8 5v14l11-7z"/>
-      </svg>
-      Watch on YouTube
-    </div>
-  </a>
-        <a href="https://www.youtube.com/watch?v=Ax3mq85teKc"
-     target="_blank"
-     rel="noopener"
-     class="yt-card"
-     aria-label="Watch Bhai Biryani Godown review on YouTube">
-    <img
-      src="https://img.youtube.com/vi/Ax3mq85teKc/hqdefault.jpg"
-      alt="Bhai Biryani Godown review video Trichy"
-      loading="lazy"
-      width="480"
-      height="360"
-    />
-    <div class="yt-play-badge">
-      <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
-        <path d="M8 5v14l11-7z"/>
-      </svg>
-      Watch on YouTube
-    </div>
-  </a>
+        <!-- Reel 1 -->
+        <div class="yt-card" style="position: relative;">
+          <video src="images/BBG%20Wedding%20(2).mp4" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>
+          <button onclick="toggleReelMute(this, event)" class="mute-btn" aria-label="Mute/Unmute" style="position: absolute; top: 12px; right: 12px; z-index: 10; background: rgba(0,0,0,0.6); border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none;">
+            <svg class="icon-muted" viewBox="0 0 24 24" width="20" height="20" stroke="white" stroke-width="2" fill="none"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+            <svg class="icon-unmuted" viewBox="0 0 24 24" width="20" height="20" stroke="white" stroke-width="2" fill="none" style="display:none;"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
+          <a href="https://www.instagram.com/reel/DTpAW-6glPn/?igsh=MXVia2NqMzY3ajg1OA==" target="_blank" rel="noopener" class="yt-play-badge" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); text-decoration: none;" aria-label="Watch Bhai Biryani Godown reel on Instagram">
+            <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg>
+            Watch on Instagram
+          </a>
+        </div>
+        <!-- Reel 2 -->
+        <div class="yt-card" style="position: relative;">
+          <video src="images/IMG_3101%20(2).mp4" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>
+          <button onclick="toggleReelMute(this, event)" class="mute-btn" aria-label="Mute/Unmute" style="position: absolute; top: 12px; right: 12px; z-index: 10; background: rgba(0,0,0,0.6); border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none;">
+            <svg class="icon-muted" viewBox="0 0 24 24" width="20" height="20" stroke="white" stroke-width="2" fill="none"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+            <svg class="icon-unmuted" viewBox="0 0 24 24" width="20" height="20" stroke="white" stroke-width="2" fill="none" style="display:none;"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
+          <a href="https://www.instagram.com/reel/DV5SBtCAal8/?igsh=MXBzcmhmcHdkM3ExZg==" target="_blank" rel="noopener" class="yt-play-badge" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); text-decoration: none;" aria-label="Watch Bhai Biryani Godown reel on Instagram">
+            <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg>
+            Watch on Instagram
+          </a>
+        </div>
+        <!-- Reel 3 -->
+        <div class="yt-card" style="position: relative;">
+          <video src="images/VID-20260406-WA0017.mp4" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>
+          <button onclick="toggleReelMute(this, event)" class="mute-btn" aria-label="Mute/Unmute" style="position: absolute; top: 12px; right: 12px; z-index: 10; background: rgba(0,0,0,0.6); border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none;">
+            <svg class="icon-muted" viewBox="0 0 24 24" width="20" height="20" stroke="white" stroke-width="2" fill="none"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+            <svg class="icon-unmuted" viewBox="0 0 24 24" width="20" height="20" stroke="white" stroke-width="2" fill="none" style="display:none;"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          </button>
+          <a href="https://www.instagram.com/reel/DWLMoKFCSwo/?igsh=MWJlZTc3Y252cDJidQ==" target="_blank" rel="noopener" class="yt-play-badge" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); text-decoration: none;" aria-label="Watch Bhai Biryani Godown reel on Instagram">
+            <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M8 5v14l11-7z"/></svg>
+            Watch on Instagram
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- ═══ FOOTER ═══ -->
     <footer class="footer" role="contentinfo">
-        <img src="images/bbg-logo-new.png" alt="Bhai Biryani Godown logo — Since 1977 Trichy" class="footer-logo">
+        <img src="images/bbg-logo-filled.png" alt="Bhai Biryani Godown logo — Since 1977 Trichy" class="footer-logo">
         <p class="footer-tagline">"Cooked over fire, served with love — Trichy"</p>
         <button class="footer-wa-btn" onclick="generalWhatsAppOrder()" aria-label="Order on WhatsApp">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
