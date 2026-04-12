@@ -641,20 +641,20 @@
             c.style.zIndex = 10;
             c.style.pointerEvents = 'auto';
           } else if (diff === 1) {
-            // 1st behind — peek
-            c.style.transform = 'translateX(0) translateY(14px) scale(0.94)';
+            // 1st behind — peek right edge
+            c.style.transform = 'translateX(20px) translateY(10px) scale(0.95)';
             c.style.opacity = '1';
             c.style.zIndex = 9;
             c.style.pointerEvents = 'none';
           } else if (diff === 2) {
-            // 2nd behind — deeper peek
-            c.style.transform = 'translateX(0) translateY(28px) scale(0.88)';
+            // 2nd behind — deeper peek right edge
+            c.style.transform = 'translateX(40px) translateY(20px) scale(0.90)';
             c.style.opacity = '0.7';
             c.style.zIndex = 8;
             c.style.pointerEvents = 'none';
           } else {
             // Hidden
-            c.style.transform = 'translateX(0) translateY(40px) scale(0.82)';
+            c.style.transform = 'translateX(60px) translateY(30px) scale(0.85)';
             c.style.opacity = '0';
             c.style.zIndex = 0;
             c.style.pointerEvents = 'none';
@@ -678,22 +678,24 @@
         if (current + 1 < total) {
           var next = cards[current + 1];
           next.classList.add('no-transition');
-          var sc = 0.94 + 0.06 * progress;    // 0.94 → 1
-          var ty = 14 - 14 * progress;         // 14 → 0
-          next.style.transform = 'translateX(0) translateY(' + ty + 'px) scale(' + sc + ')';
+          var sc = 0.95 + 0.05 * progress;    // 0.95 → 1
+          var ty = 10 - 10 * progress;         // 10 → 0
+          var tx = 20 - 20 * progress;         // 20 → 0
+          next.style.transform = 'translateX(' + tx + 'px) translateY(' + ty + 'px) scale(' + sc + ')';
         }
         if (current + 2 < total) {
           var next2 = cards[current + 2];
           next2.classList.add('no-transition');
-          var sc2 = 0.88 + 0.06 * progress;   // 0.88 → 0.94
-          var ty2 = 28 - 14 * progress;        // 28 → 14
-          next2.style.transform = 'translateX(0) translateY(' + ty2 + 'px) scale(' + sc2 + ')';
+          var sc2 = 0.90 + 0.05 * progress;   // 0.90 → 0.95
+          var ty2 = 20 - 10 * progress;        // 20 → 10
+          var tx2 = 40 - 20 * progress;        // 40 → 20
+          next2.style.transform = 'translateX(' + tx2 + 'px) translateY(' + ty2 + 'px) scale(' + sc2 + ')';
           next2.style.opacity = '' + (0.7 + 0.3 * progress);
         }
       }
 
       function goTo(idx) {
-        current = Math.max(0, Math.min(total - 1, idx));
+        current = ((idx % total) + total) % total;
         layout(true);
       }
 
