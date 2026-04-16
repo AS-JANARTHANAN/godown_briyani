@@ -289,6 +289,8 @@ function initSwipeDeck() {
     deck.addEventListener('touchcancel', function() { isDragging = false; layout(true); dragX = 0; });
 
     deck.addEventListener('mousedown', function(e) {
+      // Don't prevent default on links so they remain clickable
+      if (e.target.closest('a')) return;
       e.preventDefault(); startX = e.clientX; isDragging = true; dragX = 0;
       deck.classList.add('dragging');
     });
@@ -301,6 +303,19 @@ function initSwipeDeck() {
       if (Math.abs(dragX) > SNAP) { dragX < 0 ? goTo(current + 1) : goTo(current - 1); }
       else layout(true);
       dragX = 0;
+    });
+
+    // Mobile: treat a tiny drag as a tap → open the card's link
+    deck.addEventListener('touchend', function(e) {
+      // If it was a real swipe, the touchend handler above already ran — skip
+      if (isDragging) return;
+      // Only act on quick taps (small movement)
+      if (Math.abs(dragX) < 10) {
+        var link = e.target.closest('a');
+        if (link && link.href) {
+          window.open(link.href, link.target || '_blank');
+        }
+      }
     });
 
     layout(false);
