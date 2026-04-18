@@ -1,6 +1,6 @@
 /* ━━━━ GOOGLE FONTS IMPORT ━━━━ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Poppins:wght@300;400;600;700&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Poppins:wght@300;400;600;700&family=Bebas+Neue&family=Boogaloo&display=swap');
 
 
 
@@ -468,12 +468,12 @@ a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Baloo Thambi 2', cursive;
-  font-weight: 800;
+  font-family: 'Boogaloo', cursive;
+  font-weight: 400;
   font-size: clamp(18px, 5vw, 24px);
   color: #FFD700;
   white-space: nowrap;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
   line-height: 1;
   text-decoration: none;
   pointer-events: none;
